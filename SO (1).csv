@@ -1,5 +1,11 @@
 ,SISTEMA,FRECUENCIA
-0,Android,417
-1,iOS,118
-2,Windows,104
-3,Mac,10
+0,Android 10,3240
+1,Android 12,437
+2,Android 13,166
+3,Android 9,127
+4,Android 14,94
+5,Win64,81
+6,Android 8.1.0,8
+7,Linux x86_64,6
+8,Android 11,4
+9,Intel Mac OS X 10_15_7,4
