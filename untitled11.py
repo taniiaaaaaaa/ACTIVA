@@ -14,7 +14,7 @@ def reemplazos(v):
 pip.main(['install', 'plotly_express'])
 pip.main(["install","openpyxl"])
 
-st.title("FUNNEL Y TRACKING DE INVER+")
+st.title("ACTIVA 1.0")
 st.text('La presente página permite visualizar el comportamiento generalizado de los socios en la aplicacion.')
 #df=pd.read_excel('PROCESOS_PIVOTE.xlsx')
 
@@ -82,10 +82,10 @@ st.text('Las visitas obtenidas corresponden al uso de los siguientes sistemas op
 fig=px.pie(df, values='FRECUENCIA', names='SISTEMA')#,width=500,height=400)
 st.plotly_chart(fig)
 
-st.markdown(f' NAVEGADOR')
-df=pd.read_csv('NAVEGADOR (1).csv',encoding='latin-1')
-df=df.drop('Unnamed: 0',axis=1)
-st.text('Como enfoque adicional se puede identificar el navegador implementado como se muestra a continuación.')
-fig=px.pie(df,values='FRECUENCIA',names='NAVEGADOR',width=500,height=400)
+#st.markdown(f' NAVEGADOR')
+#df=pd.read_csv('NAVEGADOR (1).csv',encoding='latin-1')
+#df=df.drop('Unnamed: 0',axis=1)
+#st.text('Como enfoque adicional se puede identificar el navegador implementado como se muestra a continuación.')
+#fig=px.pie(df,values='FRECUENCIA',names='NAVEGADOR',width=500,height=400)
 #,width=500,height=400)
-st.plotly_chart(fig)
+#st.plotly_chart(fig)
