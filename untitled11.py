@@ -41,39 +41,39 @@ chart_data = chart_data.set_index('FECHA')
 st.bar_chart(chart_data)
 #st.image('BARRAS.png',caption='EVOLUCION DE LA ACTIVIDAD')
 
-st.text('Estos valores corresponden a los ingresos identificados en las siguientes ubicaciones.')
-df=pd.read_csv('COORDENADAS (1).csv',encoding='latin-1')
-df=df.rename(columns={'LATITUD':'lat','LONGITUD':'lon'})
-chart_data = df
+#st.text('Estos valores corresponden a los ingresos identificados en las siguientes ubicaciones.')
+#df=pd.read_csv('COORDENADAS (1).csv',encoding='latin-1')
+#df=df.rename(columns={'LATITUD':'lat','LONGITUD':'lon'})
+#chart_data = df
 
-st.pydeck_chart(pdk.Deck(
-    map_style=None,
-    initial_view_state=pdk.ViewState(
-        latitude=19.69816,
-        longitude=-101.15816,
-        zoom=11,
-        pitch=50,
-    ),
-    layers=[
-        pdk.Layer(
-           'HexagonLayer',
-           data=chart_data,
-           get_position='[lon, lat]',
-           radius=200,
-           elevation_scale=4,
-           elevation_range=[0, 1000],
-           pickable=True,
-           extruded=True,
-        ),
-        pdk.Layer(
-            'ScatterplotLayer',
-            data=chart_data,
-            get_position='[lon, lat]',
-            get_color='[0]',
-            get_radius=200,
-        ),
-    ],
-))
+#st.pydeck_chart(pdk.Deck(
+ #   map_style=None,
+  #  initial_view_state=pdk.ViewState(
+   #     latitude=19.69816,
+    #    longitude=-101.15816,
+     #   zoom=11,
+      #  pitch=50,
+    #),
+#    layers=[
+ #       pdk.Layer(
+  #         'HexagonLayer',
+   #        data=chart_data,
+    #       get_position='[lon, lat]',
+     #      radius=200,
+      #     elevation_scale=4,
+#           elevation_range=[0, 1000],
+ #          pickable=True,
+  #         extruded=True,
+   #     ),
+    #    pdk.Layer(
+     #       'ScatterplotLayer',
+      #      data=chart_data,
+       #     get_position='[lon, lat]',
+        #    get_color='[0]',
+         #   get_radius=200,
+#        ),
+ #   ],
+#))
 
 st.markdown(f' SISTEMA OPERATIVO')
 df=pd.read_csv('SO (1).csv',encoding='latin-1')
