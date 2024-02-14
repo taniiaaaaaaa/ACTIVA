@@ -30,7 +30,7 @@ df=pd.read_csv('FUNEL (1).csv',encoding='latin-1')
 #data = dict(
  #   number=[39, 27.4, 20.6, 11, 2],
   #  stage=["Website visit", "Downloads", "Potential customers", "Requested price", "invoice sent"])
-fig = px.funnel(df, x=df['VALOR'], y=df['PASO'])
+fig = px.funnel(df, x=df['FRECUENCIA'], y=df['PASO'])
 st.plotly_chart(fig)
 
 
